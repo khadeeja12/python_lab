@@ -9,6 +9,8 @@ elif o=='-':
 elif o=='*':
     r=a*b
 elif o=='/':
+   if b==0 :
+      print("not possible")
    r=a/b
 
 print(r)
