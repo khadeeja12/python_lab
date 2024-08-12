@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right bottom, #003366, #00cc99); /* Gradient background with futuristic colors */
+      color: #ffffff; /* White text color */
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+      z-index: 1;
+    }
+    .registration-section {
+      padding: 80px 0;
+      text-align: center;
+      position: relative; /* Ensure overlay covers the background */
+      z-index: 2; /* Ensure form is above the overlay */
+    }
+    .registration-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    }
+    .registration-form h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: #ffcc00; /* Yellow heading */
+    }
+    .registration-form .form-group {
+      margin-bottom: 25px;
+    }
+    .registration-form label {
+      font-weight: bold;
+    }
+    .registration-form .btn-primary {
+      width: 100%;
+      background-color: #ff9900; /* Orange submit button */
+      border-color: #ff9900;
+    }
+    .registration-form .btn-primary:hover {
+      background-color: #cc6600; /* Darker orange on hover */
+      border-color: #cc6600;
+    }
+    .registration-form .btn-primary:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 153, 0, 0.5); /* Light shadow on focus */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay for background darkening effect -->
+  <div class="overlay"></div>
+
+  <!-- Registration Form Section -->
+  <section class="registration-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="registration-form">
+            <h2>Register for Euphoria</h2>
+            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbx36YWJe5AQnwobRe-MzxB_T7KPfI4mgTZn4MJ9wMjQbVRNVxYQE0U-H3x_IhE1HTqiFA/exec">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="agree" required>
+                  <label class="custom-control-label" for="agree">I agree to the terms and conditions</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Register Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to Handle Form Submission -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector("#registrationForm");
+
+      // Handle form submission
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(form);
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx36YWJe5AQnwobRe-MzxB_T7KPfI4mgTZn4MJ9wMjQbVRNVxYQE0U-H3x_IhE1HTqiFA/exec';
+        
+        fetch(scriptURL, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (response.ok) {
+            alert('Registration successful!');
+            form.reset(); // Optionally reset the form upon successful submission
+          } else {
+            alert('Failed to submit form.');
+          }
+        })
+        .catch(error => {
+          alert('Error submitting form: ' + error.message);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

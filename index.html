@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Bootstrap Template</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('party.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .features {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+    .feature-box {
+      text-align: center;
+      padding: 20px;
+    }
+    .feature-box i {
+      font-size: 3rem;
+      color: #007bff;
+    }
+    .feature-box h3 {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+    .feature-box p {
+      font-size: 1.1rem;
+    }
+    .feature-box:hover {
+      background-color: #e9ecef;
+      transform: translateY(-10px);
+    }
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .footer p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Euphoria</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Register</a> <!-- Link to registration page -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Welcome to Euphoria</h1>
+          <p>National Fest by RCSS</p>
+          <a href="registration.html" class="btn btn-primary btn-lg mt-3">Register Now</a> <!-- Link to registration page -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="fas fa-chart-line"></i>
+            <h3>Analytics</h3>
+            <p>Track and analyze your website traffic easily.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="fas fa-cogs"></i>
+            <h3>Customization</h3>
+            <p>Customize your website to fit your brand.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Hosting</h3>
+            <p>Reliable cloud hosting for your website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy; 2024 Euphoria. All rights reserved.</p>
+          <p>Contact: info@euphoria.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+  
+
+
+</body>
+</html>
